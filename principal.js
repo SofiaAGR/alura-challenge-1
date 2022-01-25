@@ -20,9 +20,6 @@ No se permite acentuación de palabras
 */
 
 
-// var inicio = document.querySelector("#input-texto");
-// inicio.focus();
-
 var botonEncriptar = document.querySelector("#btn-encriptar");
 botonEncriptar.addEventListener("click", function(event){ //esto es una funcion anonima
     
@@ -30,7 +27,6 @@ botonEncriptar.addEventListener("click", function(event){ //esto es una funcion 
     var form = document.querySelector("#input-texto");
     var mensajeOriginal = capturarDatos(form);
     var errores = validarForm(mensajeOriginal);
-    // console.log(errores);
 
     if(errores.length > 0){ //si hay algun error..
         mostrarMensajesError (errores);
@@ -46,9 +42,8 @@ botonEncriptar.addEventListener("click", function(event){ //esto es una funcion 
 }); 
 
 var botonBorrar = document.querySelector("#btn-borrar");
-botonBorrar.addEventListener("click", function(event){ //esto es una funcion anonima
-    
-    // event.preventDefault();
+botonBorrar.addEventListener("click", function(event){ 
+
     var form = document.querySelector("#input-texto");
     var borrarMensaje = document.querySelector("#msg");
     borrarMensaje.value="";
@@ -67,7 +62,6 @@ botonDesencriptar.addEventListener("click", function(event){
     var form = document.querySelector("#input-texto");
     var mensajeOriginal = capturarDatos(form);
     var errores = validarForm(mensajeOriginal);
-    // console.log(errores);
 
     if(errores.length > 0){ //si hay algun error..
         mostrarMensajesError (errores);
@@ -91,20 +85,8 @@ botonCopiar.addEventListener ("click", function(event){
 
 
 function capturarDatos (form){
-    //Copiamos en las variables el contenido ingresado por usuario (nombre)
-    //Creamos una CLASE que tenga los atributos nombre, peso, altura, gordura
-    // para poder retornar todos los datos desde la funcion
     var mensaje = form.value; 
     return mensaje;
 }
 
 
-function mostrarMensajesError (errores){
-    var ul = document.querySelector("#mensajes-error");
-    ul.innerHTML = ""; //Esto me resetea cada mensaje de error nuevo pero no me los borra cuando hago un ingreso valido
-    errores.forEach(function(error){
-        var li = document.createElement("li");
-        li.textContent = error;
-        ul.appendChild(li);
-    });
-}
