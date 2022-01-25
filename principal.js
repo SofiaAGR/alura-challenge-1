@@ -98,45 +98,6 @@ function capturarDatos (form){
     return mensaje;
 }
 
-function validarForm (mensajeOriginal){
-    var errores = [];
-    var i=0;
-    var character="";
-    var mayus=0;
-    var num = 0;
-    if(mensajeOriginal == ""){
-        errores.push ("Text field is empty.");
-    }
-    else{
-        while (i < mensajeOriginal.length){
-
-            character = mensajeOriginal.charAt(i);
-            console.log(character);
-            if (!isNaN(character * 1)){
-                if(character!=" "){
-                num = 1;
-                console.log("es un numero");
-                }
-            }
-
-            else{
-                if (character == character.toUpperCase()) {
-                    mayus = 1;
-                }
-            }
-            i++;
-        }
-
-        if (num == 1){
-            errores.push ("Numbers or symbols are not allowed.");
-        }
-        if (mayus == 1){
-            errores.push ("Uppercases are not allowed.");
-        }
-
-    }
-    return errores;
-}
 
 function mostrarMensajesError (errores){
     var ul = document.querySelector("#mensajes-error");
