@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Alura-ONE CODER</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alura-ONE CODER</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/1b14b316b5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <h1 class="titulo">CODEC.</h1>
+
+  <main class="main">
+    <section class="form box">
+      <form action="" id="form-mensaje">
+        <h2 id="">ORIGINAL MESSAGE</h2>
+        <!-- <label for="input-texto">Mensaje original</label> -->
+        <!-- <textarea class="text-input" id="text-area" name="text-area" placeholder="Ingrese el texto aquí"></textarea> -->
+        <textarea class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Pss.. your text goes here!"></textarea>
+        <button type="submit" class="btn" id="btn-encriptar">ENCRYPT</button>
+        <button type="button" class="btn" id="btn-desencriptar">DECRYPT</button>
+        <button type="button" class="btn fas fa-trash-alt" id="btn-borrar"></button>
+        <!-- <input class="btn" type="submit" value="ENCRIPTAR" id="btn-encriptar"> -->
+        <!-- <input class="btn" type="submit" value="DESENCRIPTAR" id="btn-desencriptar"> -->
+      </form>
+    </section>
+    <i class="fas fa-angle-double-right" id="flechas"></i>
+    <section class="msg box">
+      <h2 id="mensaje-final">CODED MESSAGE</h2>
+      <textarea class="text-input" type="text" id="msg" readonly></textarea>
+      <button type="button" class="btn fas fa-copy" id="btn-copy"></button>
+      <!-- <input class="btn" type="submit" value="COPIAR" id="btn-copy"> -->
+    </section>
+
+
+  </main>
+  <section>
+    <ul id="mensajes-error"></ul>
+  </section>
+  <footer><p class="footer">© 2022 Alura - ONE (SAGR)</p></footer>
+  <script src="principal.js"></script>
+  <script src="encriptar.js"></script>
+  <script src="desencriptar.js"></script>
+  <script src="copiar.js"></script>
+
+</body>
+</html>
+
+<!-- <textarea name="" id="" cols="30" rows="10"></textarea> -->
+<!-- <i class="fas fa-copy"></i> -->
