@@ -78,9 +78,9 @@ botonDesencriptar.addEventListener("click", function(event){
 var botonCopiar = document.querySelector("#btn-copy");
 botonCopiar.addEventListener ("click", function(event){
     var copyText = document.querySelector("#msg");
-    copyText.select();
-    document.execCommand("copy");
-
+    navigator.clipboard.writeText(copyText.value);
+    //copyText.value = "";
+    
 });
 
 
